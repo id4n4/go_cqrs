@@ -1,14 +1,17 @@
 package domain
 
+import "time"
+
 type (
 	PlanetTypes string
 	Planet      struct {
-		ID         string
-		Name       string
-		Resource   string
-		PlanetType PlanetTypes
-		distance   int
-		order      int
+		ID           string      `json:"id"`
+		Name         string      `json:"name"`
+		Resource     string      `json:"resource"`
+		PlanetType   PlanetTypes `json:"planet_type"`
+		Distance     int         `json:"distance"`
+		OrbitalOrder int         `json:"orbital_order"`
+		CreatedAt    time.Time   `json:"created_at"`
 	}
 )
 
